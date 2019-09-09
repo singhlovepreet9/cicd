@@ -29,5 +29,6 @@ phases:
   post_build:
     commands:
       - echo deploy to s3
+      - "aws s3 mb s3://cicd-demo"
       - "aws s3 sync ./build s3://cicd-demo"
       - echo Deployment completed on `date`
