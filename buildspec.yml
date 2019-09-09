@@ -29,5 +29,5 @@ phases:
   post_build:
     commands:
       - echo deploy to s3
-      - "aws s3 cp --recursive --acl public-read ./build s3://cicd-demo"
+      - aws s3 rm s3://cicd-demo --recursive && aws s3 sync build s3://cicd-demo --acl=public-read
       - echo Deployment completed on `date`
