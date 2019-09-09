@@ -18,14 +18,14 @@ phases:
       - echo Installing frontend NPM dependencies...
       - cd frontend && npm install
       - echo installing backend dependencies
-      - cd backend && npm install
+      - cd ../backend && npm install
   build:
     commands:
       - echo Deployment started on `date`
       - echo Deploying with Serverless Framework
       - cd backend && sls deploy -v -s $ENV_NAME
       - echo frontend build started
-      - cd frontend && npm run build
+      - cd ../frontend && npm run build
   post_build:
     commands:
       - echo deploy to s3
