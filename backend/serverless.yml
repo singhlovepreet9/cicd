@@ -1,0 +1,10 @@
+service: sls-cicd
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+
+functions:
+  hello:
+    handler: handler.logger
