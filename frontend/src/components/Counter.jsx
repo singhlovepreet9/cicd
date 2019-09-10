@@ -10,7 +10,7 @@ class Counter extends Component {
   componentWillMount = async () => {
     await axios
       .get(
-        "https://o2ui13lnzc.execute-api.us-east-1.amazonaws.com/test/greet/Falcon?lang=hi"
+        "https://o2ui13lnzc.execute-api.us-east-1.amazonaws.com/test/greet/Falcon?lang=en"
       )
       .then(res => {
         this.setState({ message: res.data.message });
