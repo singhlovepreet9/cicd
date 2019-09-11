@@ -33,13 +33,6 @@ phases:
       - echo Deployment completed on `date`
 
 artifacts:
-  files:
-    - "frontend/build/**/*"
-    - "backend/**/*"
+  files: -"/**/*"
 
   name: "cicd-artifacts"
-
-cache:
-  paths:
-    - "frontend/node_modules/**/*"
-    - "backend/node_modules/**/*"
