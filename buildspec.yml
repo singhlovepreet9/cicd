@@ -31,3 +31,14 @@ phases:
       - echo deploy to s3
       - "aws s3 cp --recursive --acl public-read ./build s3://cicd-demo-sls"
       - echo Deployment completed on `date`
+
+artifacts:
+  files:
+    - "./frontend/build"
+    - "./backend"
+
+  name: "cicd-artifacts"
+
+cache:
+  - "./frontend/node_modules"
+  - "./backend/node_modules"
