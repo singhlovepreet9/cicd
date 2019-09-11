@@ -33,6 +33,6 @@ phases:
       - echo Deployment completed on `date`
 
 artifacts:
-  files: -"/**/*"
+  files: -"**/*"
 
   name: "cicd-artifacts"
