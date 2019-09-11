@@ -34,8 +34,8 @@ phases:
 
 artifacts:
   files:
-    - "frontend/build"
-    - "backend"
+    - "frontend/build/**/*"
+    - "backend/**/*"
 
   name: "cicd-artifacts"
 
