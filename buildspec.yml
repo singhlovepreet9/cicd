@@ -33,6 +33,8 @@ phases:
       - echo Deployment completed on `date`
 
 artifacts:
-  files: -"**/*"
+  files: -"frontend"
+    -"backend"
+    - "buildspec.yml"
 
   name: "cicd-artifacts"
