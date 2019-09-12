@@ -1,0 +1,20 @@
+version: 0.2
+env:
+  parameter-store:
+    AWS_ACCESS_KEY_ID: /CodeBuild/AwsAccessKey
+    AWS_SECRET_ACCESS_KEY: /CodeBuild/AwsSecretAccessKey
+    AWS_DEFAULT_REGION: /CodeBuild/AwsDefaultRegion
+  variables:
+    ENV_NAME: Dev
+phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+    commands:
+      - echo Installing Serverless blah blah...
+
+artifacts:
+  files:
+    - "./**/*"
+
+  name: "cicd-artifacts"
