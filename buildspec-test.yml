@@ -25,3 +25,8 @@ phases:
       - echo Deploying with Serverless Framework
       - echo frontend build started
       - cd ../frontend && npm run build
+
+cache:
+  paths:
+    - "frontend/node_modules/**/*"
+    - "backend/node_modules/**/*"
