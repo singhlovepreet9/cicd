@@ -12,6 +12,7 @@ phases:
       nodejs: 8
     commands:
       - echo Installing Serverless blah blah...
+      - echo env $CODEBUILD_WEBHOOK_TRIGGER $CODEBUILD_WEBHOOK_HEAD_REF $CODEBUILD_SOURCE_VERSION
 
 artifacts:
   files:

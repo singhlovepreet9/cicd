@@ -12,6 +12,7 @@ phases:
       nodejs: 8
     commands:
       - echo Installing Serverless...
+      - echo env $CODEBUILD_WEBHOOK_TRIGGER $CODEBUILD_WEBHOOK_HEAD_REF $CODEBUILD_SOURCE_VERSION
       - npm install -g serverless
   pre_build:
     commands:
@@ -25,3 +26,9 @@ phases:
       - echo Deploying with Serverless Framework
       - echo frontend build started
       - cd ../frontend && npm run build
+
+cache:
+  paths:
+    - "frontend/node_modules/**/*"
+    - "backend/node_modules/**/*"
+    - "backend/.serverless"
