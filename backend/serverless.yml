@@ -11,10 +11,6 @@ provider:
       Action: "ssm:GetParameters"
       Resource:
         - "arn:aws:ssm:us-east-1:*:parameter/*"
-    - Effect: "Allow"
-      Action: "kms:Decrypt"
-      Resource:
-        - "arn:aws:kms:us-east-1:*:key/5dfe9ce1-a14d-41a0-a8f5-257f8eb12d7c"
 
 functions:
   hello:
