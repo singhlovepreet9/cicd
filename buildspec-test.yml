@@ -20,7 +20,6 @@ phases:
     commands:
       - echo Deployment started on `date`
       - echo Deploying with Serverless Framework
-      - cd backend
       - sls deploy
 
 cache:
