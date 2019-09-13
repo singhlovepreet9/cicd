@@ -4,7 +4,7 @@ plugins: -serverless-offline
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${ssm:/CodeBuild/EnvName~true}
+  stage: ${env:ENV_NAME}
 
 functions:
   hello:
