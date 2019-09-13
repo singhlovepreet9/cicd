@@ -15,16 +15,12 @@ phases:
       - npm install -g serverless
   pre_build:
     commands:
-      - echo Installing frontend NPM dependencies...
-      - cd frontend && npm install
-      - echo installing backend dependencies
-      - cd ../backend && npm install
+      - cd backend && npm install
   build:
     commands:
       - echo Deployment started on `date`
       - echo Deploying with Serverless Framework
-      - echo frontend build started
-      - cd ../frontend && npm run build
+      - sls deploy
 
 cache:
   paths:
