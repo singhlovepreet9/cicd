@@ -1,5 +1,6 @@
 service: sls-cicd
 
+plugins: -serverless-offline
 provider:
   name: aws
   runtime: nodejs8.10
