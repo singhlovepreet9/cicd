@@ -4,7 +4,7 @@ env:
     AWS_ACCESS_KEY_ID: /CodeBuild/AwsAccessKey
     AWS_SECRET_ACCESS_KEY: /CodeBuild/AwsSecretAccessKey
     AWS_DEFAULT_REGION: /CodeBuild/AwsDefaultRegion
-    ENV_NAME: /Codebuild/EnvName
+    ENV_NAME: /CodeBuild/EnvName
 phases:
   install:
     runtime-versions:
